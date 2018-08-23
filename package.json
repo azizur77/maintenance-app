@@ -21,7 +21,8 @@
     "manifest": "d2-manifest package.json build/manifest.webapp",
     "deploy": "npm run build && mvn clean deploy",
     "lint": "eslint ./src",
-    "profile": "yarn start -- --profile"
+    "profile": "yarn start -- --profile",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -126,5 +127,8 @@
         "href": ".."
       }
     }
-  }
+  },
+  "files": [
+    "build"
+  ]
 }
